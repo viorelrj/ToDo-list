@@ -24,12 +24,12 @@
 .list__item--delete {
   background: #ea4335;
 }
+.list__item--check .list__content {
+  text-decoration: line-through;
+}
 .list__content {
   transition: all .2s ease;
   margin: 10px 0;
-}
-.list__content--check {
-  text-decoration: line-through;
 }
 .list .btn {
   transition: all .2s ease;
