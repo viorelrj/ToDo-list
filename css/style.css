@@ -19,7 +19,6 @@
 .list__item {
   min-height: 66px;
   margin-bottom: 5px;
-  transition: all 0.1s ease-in-out;
 }
 .list__item--delete {
   background: #ea4335;
@@ -28,7 +27,6 @@
   text-decoration: line-through;
 }
 .list__content {
-  transition: all .2s ease;
   margin: 10px 0;
 }
 .list .btn {
