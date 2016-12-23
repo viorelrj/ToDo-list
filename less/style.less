@@ -17,6 +17,7 @@
 	&__item {
 		min-height: 66px;
 		margin-bottom: 5px;
+		cursor: move;
 
 		&--delete {
 			background: #ea4335;
@@ -25,6 +26,12 @@
 		&--check{
 			.list__content {
 				text-decoration: line-through;
+			}
+		}
+
+		&:hover {
+			.item__opts {
+				opacity: 1;
 			}
 		}
 		
@@ -64,8 +71,8 @@
 
 		transition: opacity .2s ease-in-out;
 
-		&--hover{
+		/* &--hover{
 			opacity: 1;
-		}
+		} */
 	} 
 }

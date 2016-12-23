@@ -28,9 +28,27 @@
 		</div>
 	</div>
 	<footer>
+		<script id="item-template" type="text/template">
+			<div class="panel panel-default list__item {{check}}">
+				<div class="panel-body">
+					<div class="col-xs-12 col-sm-10">
+						<p class="list__content">{{content}}</p>
+					</div>
+					<div class="btn-group item__opts js-item__opts" role="group" aria-label="..."> 
+						<button type="button" class="btn btn-default js-btn--check btn--check"> 
+							<i class="fa fa-check" aria-hidden="true"></i> 
+						</button> 
+						<button type="button" class="btn btn-default js-btn--delete btn--delete"> 
+							<i class="fa fa-trash-o" aria-hidden="true"></i> 
+						</button> 
+					</div>
+				</div>
+			</div>
+		</script>
 		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
 		<script src="js/main.js"></script>
 	</footer>
 </body>

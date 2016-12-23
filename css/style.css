@@ -19,12 +19,16 @@
 .list__item {
   min-height: 66px;
   margin-bottom: 5px;
+  cursor: move;
 }
 .list__item--delete {
   background: #ea4335;
 }
 .list__item--check .list__content {
   text-decoration: line-through;
+}
+.list__item:hover .item__opts {
+  opacity: 1;
 }
 .list__content {
   margin: 10px 0;
@@ -52,7 +56,7 @@
   opacity: 0;
   position: relative;
   transition: opacity 0.2s ease-in-out;
-}
-.list .item__opts--hover {
-  opacity: 1;
+  /* &--hover{
+			opacity: 1;
+		} */
 }
