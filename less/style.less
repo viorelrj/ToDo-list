@@ -12,6 +12,12 @@
 
 	&__input {
 		margin-bottom: 10px;
+
+		.form__input{
+			&:focus {
+				border: 1px solid #ccc;
+			}
+		}
 	}
 
 	&__item {
@@ -19,14 +25,20 @@
 		margin-bottom: 5px;
 		cursor: move;
 
+		transition: border, background .2s ease;
+
 		&--delete {
 			background: #ea4335;
+			.list__content {
+				color: white;
+			}
 		}
 
 		&--check{
 			.list__content {
 				text-decoration: line-through;
 			}
+			border-bottom: 3px solid #34a853;
 		}
 
 		&:hover {
@@ -34,7 +46,6 @@
 				opacity: 1;
 			}
 		}
-		
 	}
 
 	&__content {
@@ -68,11 +79,6 @@
 		opacity: 0;
 		position: relative;
 
-
 		transition: opacity .2s ease-in-out;
-
-		/* &--hover{
-			opacity: 1;
-		} */
 	} 
 }

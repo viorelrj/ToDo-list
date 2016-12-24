@@ -5,12 +5,15 @@ $(document).ready(function(){
 	function ItemObj (content, state) {
 		this.content = content;
 		this.check = state;
+		this.delete = false;
 	}
 	if (localStorage.getItem('data') != null) {
 		var data = JSON.parse(localStorage['data']);
 		for (var i = data.length - 1; i >= 0 ; i--) {
-			data[i].check = (data[i].check) ? 'list__item--check' : null;
-			$('.list__items').prepend(Mustache.to_html(template, data[i]));
+			if (!data[i].delete) {
+				data[i].check = (data[i].check) ? 'list__item--check' : null;
+				$('.list__items').prepend(Mustache.to_html(template, data[i]));
+			}
 		} 
 	}
 
@@ -23,6 +26,7 @@ $(document).ready(function(){
 			var itemData = new ItemObj();
 			itemData.content = $(this).find('.list__content').text();
 			itemData.check = ($(this).hasClass('list__item--check')) ? true : false;
+			itemData.delete = ($(this).hasClass('list__item--delete')) ? true : false;
 			data.push(itemData);	
 		});
 		JSONdata = JSON.stringify(data);	
@@ -59,7 +63,7 @@ $(document).ready(function(){
 
 	//Deleting the Item
 	$(document).on('click', '.js-btn--delete', function(){
-		$(this).closest('.list__item').toggleClass('list__item--delete').remove();
+		$(this).closest('.list__item').removeClass('list__item--check').toggleClass('list__item--delete').fadeOut();
 		saveState();
 	});
 
