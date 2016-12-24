@@ -23,7 +23,7 @@
   min-height: 66px;
   margin-bottom: 5px;
   cursor: move;
-  transition: border, background .2s ease;
+  transition: border 0.2s ease, background 0.1s ease-in;
 }
 .list__item--delete {
   background: #ea4335;

@@ -63,7 +63,7 @@ $(document).ready(function(){
 
 	//Deleting the Item
 	$(document).on('click', '.js-btn--delete', function(){
-		$(this).closest('.list__item').removeClass('list__item--check').toggleClass('list__item--delete').fadeOut();
+		$(this).closest('.list__item').removeClass('list__item--check').toggleClass('list__item--delete').delay(100).fadeOut();
 		saveState();
 	});
 
